@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.avto.yuqlama.MainActivity">
+    <item
+        android:id="@+id/action_update"
+        android:orderInCategory="100"
+        android:title="Serverga yuklash"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_upgrade"
+        android:orderInCategory="200"
+        android:title="Serverdan ro'yxatni yangilash"
+        />
+</menu>
