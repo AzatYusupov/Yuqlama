@@ -9,7 +9,7 @@
     android:minHeight="?attr/actionBarSize"
     android:background="?attr/colorPrimary"
     android:elevation="8dp"
-    tools:context=".GroupListActivity"
+    tools:context=".activities.GroupActivity"
     app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 

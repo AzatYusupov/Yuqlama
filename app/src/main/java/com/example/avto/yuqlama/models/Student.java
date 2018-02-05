@@ -1,51 +1,44 @@
-package com.example.avto.yuqlama.Model;
+package com.example.avto.yuqlama.models;
 
-import android.support.annotation.NonNull;
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
 /**
  * Created by Azat on 03.03.2017.
  */
 
-public class Student implements Comparable<Student>{
-    private String name;
-    private int id;
-    private int parentGroup;
-    private boolean absent;
-    public void setName(String name) {
-        this.name = name;
+public class Student extends RealmObject{
+
+    @PrimaryKey
+    int id;
+
+    @Required
+    String name;
+
+    int groupId;
+
+    public int getId() {
+        return id;
     }
-    public String getName() {
-        return this.name;
-    }
-    public boolean isAbsent() {
-        return absent;
-    }
-    public void setAbsent(boolean absent) {
-        this.absent = absent;
-    }
+
     public void setId(int id) {
         this.id = id;
     }
-    public int getId() {
-        return this.id;
-    }
-    public void setParentGroup(int parentGroup) {
-        this.parentGroup = parentGroup;
-    }
-    public int getParentGroup() {
-        return this.parentGroup;
+
+    public String getName() {
+        return name;
     }
 
-    public Student(String name, int id, int parentGroup, boolean absent) {
+    public void setName(String name) {
         this.name = name;
-        this.id = id;
-        this.parentGroup = parentGroup;
-        this.absent = absent;
     }
-    public Student(){}
 
-    @Override
-    public int compareTo(@NonNull Student o) {
-        return this.name.compareTo(o.name);
+    public int getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(int groupId) {
+        this.groupId = groupId;
     }
 }

@@ -21,13 +21,11 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
-                android:id="@+id/list_group"
-                android:layout_margin="7dp"
-                android:orientation="vertical"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/group_recycler"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-            </LinearLayout>
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
         </ScrollView>
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

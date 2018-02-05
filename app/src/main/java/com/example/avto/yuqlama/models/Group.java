@@ -1,5 +1,6 @@
-package com.example.avto.yuqlama.Model;
+package com.example.avto.yuqlama.models;
 
+import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
@@ -10,21 +11,21 @@ import io.realm.annotations.Required;
 
 public class Group extends RealmObject{
 
-    @Required
     @PrimaryKey
     int id;
 
     @Required
     String name;
 
-    @Required
     int courseId;
 
     boolean open;
 
+//    RealmList<Student> students;
+
     public Group(int id, String name, int courseId) {
-        this.name = name;
         this.id = id;
+        this.name = name;
         this.courseId = courseId;
     }
     public Group(){}
